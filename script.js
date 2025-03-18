@@ -47,6 +47,14 @@ function navigateToComplaintsPage() {
     observer.observe(document.body, { childList: true, subtree: true });
   });
 }
+console.log("Скрипт запущен"); // Проверка
+function navigateToComplaintsPage() {
+  console.log("Переход на страницу жалоб"); // Проверка
+  const complaintsPageUrl = "https://grnd.gg/admin/complaints"; // Укажите правильный URL
+  window.location.href = complaintsPageUrl;
+}
+
+navigateToComplaintsPage();
 
 navigateToComplaintsPage();
 function generateCommand(type, time, rule) {
