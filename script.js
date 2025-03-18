@@ -1,3 +1,5 @@
+console.log("Скрипт запущен"); // Проверка
+
 const punishmentSelect = document.getElementById("punishment-select");
 const timeInput = document.getElementById("time-input");
 const ruleInput = document.getElementById("rule-input");
@@ -50,7 +52,6 @@ function navigateToComplaintsPage() {
   };
 }
 
-console.log("Скрипт запущен"); // Проверка
 navigateToComplaintsPage();
 
 function generateCommand(type, time, rule) {
