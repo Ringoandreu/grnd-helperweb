@@ -28,7 +28,27 @@ addToSessionButton.addEventListener("click", function () {
   saveToHistory(command);
   alert("Команда добавлена в сессию: " + command);
 });
+function navigateToComplaintsPage() {
+  const complaintsPageUrl = "https://grnd.gg/admin/complaints"; // Укажите правильный URL
+  window.location.href = complaintsPageUrl;
 
+  // Ждем загрузки страницы
+  window.addEventListener("load", function () {
+    const observer = new MutationObserver(function (mutations) {
+      const infoBlock = document.querySelector(".content-info");
+      if (infoBlock) {
+        // Элемент найден, можно выполнять код
+        observer.disconnect(); // Остановить наблюдение
+        console.log("Информационный блок найден:", infoBlock);
+        // Ваш код для работы с infoBlock
+      }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
+}
+
+navigateToComplaintsPage();
 function generateCommand(type, time, rule) {
   return `/${type} Nickname ${time} ${rule}`;
 }
