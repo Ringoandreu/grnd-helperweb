@@ -2,18 +2,18 @@
   "name": "Генератор наказаний",
   "short_name": "Наказания",
   "description": "Генерация команд для наказаний",
-  "start_url": "/",
+  "start_url": "/grnd-helperweb.git",
   "display": "standalone",
   "background_color": "#222",
   "theme_color": "#4CAF50",
   "icons": [
     {
-      "src": "icon-192x192.png",
+      "src": "/grnd-helperweb.git/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "icon-512x512.png",
+      "src": "/grnd-helperweb.git/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
