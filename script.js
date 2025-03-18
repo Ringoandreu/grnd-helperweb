@@ -28,14 +28,16 @@ addToSessionButton.addEventListener("click", function () {
   saveToHistory(command);
   alert("Команда добавлена в сессию: " + command);
 });
-function navigateToComplaintsPage() {
-  const complaintsPageUrl = "https://grnd.gg/admin/complaints"; // Укажите правильный URL
-  window.location.href = complaintsPageUrl;
 
-  // Ждем загрузки страницы
-  window.addEventListener("load", function () {
+function navigateToComplaintsPage() {
+  console.log("Переход на страницу жалоб"); // Проверка
+  const complaintsPageUrl = "https://grnd.gg/admin/complaints"; // Укажите правильный URL
+  const newWindow = window.open(complaintsPageUrl, "_blank"); // Открываем в новой вкладке
+
+  // Ждем загрузки новой страницы
+  newWindow.onload = function () {
     const observer = new MutationObserver(function (mutations) {
-      const infoBlock = document.querySelector(".content-info");
+      const infoBlock = newWindow.document.querySelector(".content-info");
       if (infoBlock) {
         // Элемент найден, можно выполнять код
         observer.disconnect(); // Остановить наблюдение
@@ -44,19 +46,13 @@ function navigateToComplaintsPage() {
       }
     });
 
-    observer.observe(document.body, { childList: true, subtree: true });
-  });
+    observer.observe(newWindow.document.body, { childList: true, subtree: true });
+  };
 }
+
 console.log("Скрипт запущен"); // Проверка
-function navigateToComplaintsPage() {
-  console.log("Переход на страницу жалоб"); // Проверка
-  const complaintsPageUrl = "https://grnd.gg/admin/complaints"; // Укажите правильный URL
-  window.location.href = complaintsPageUrl;
-}
-
 navigateToComplaintsPage();
 
-navigateToComplaintsPage();
 function generateCommand(type, time, rule) {
   return `/${type} Nickname ${time} ${rule}`;
 }
