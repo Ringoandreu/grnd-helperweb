@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Генератор наказаний</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="punishment-form">
+    <h3>Выдача наказания</h3>
+    <select id="punishment-select">
+      <option value="" disabled selected>Выберите наказание</option>
+      <option value="offmute">Mute</option>
+      <option value="offjail">Jail</option>
+      <option value="offban">Ban</option>
+      <option value="offwarn">Warn</option>
+    </select>
+    <div class="input-container">
+      <input type="number" id="time-input" placeholder="Время (мин)" min="1">
+      <span class="icon">⏰</span>
+    </div>
+    <div class="input-container">
+      <input type="text" id="rule-input" placeholder="Пункт правил">
+      <span class="icon">📖</span>
+    </div>
+    <button id="generate-button">Скопировать</button>
+    <button id="add-to-session-button">Добавить</button>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js")
+        .then((registration) => {
+          console.log("Service Worker зарегистрирован: ", registration);
+        })
+        .catch((error) => {
+          console.error("Ошибка регистрации Service Worker: ", error);
+        });
+    }
+  </script>
+</body>
+</html>
