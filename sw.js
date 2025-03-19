@@ -1,11 +1,11 @@
 const CACHE_NAME = "generator-v1";
 const ASSETS = [
   "/",
-  "https://github.com/Ringoandreu/grnd-helperweb/index.html",
-  "https://github.com/Ringoandreu/grnd-helperweb/styles.css",
-  "https://github.com/Ringoandreu/grnd-helperweb/script.js",
-  "https://github.com/Ringoandreu/grnd-helperweb/icon-192x192.png",
-  "https://github.com/Ringoandreu/grnd-helperweb/icon-512x512.png"
+  "/index.html",
+  "/styles.css",
+  "/script.js",
+  "/icon-192x192.png",
+  "/icon-512x512.png"
 ];
 
 self.addEventListener("install", (event) => {

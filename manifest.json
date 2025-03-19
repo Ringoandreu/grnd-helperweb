@@ -2,18 +2,18 @@
   "name": "Генератор наказаний",
   "short_name": "Наказания",
   "description": "Генерация команд для наказаний",
-  "start_url": "https://github.com/Ringoandreu/grnd-helperweb/",
+  "start_url": "https://grnd.gg/admin/complaints",
   "display": "standalone",
   "background_color": "#222",
   "theme_color": "#4CAF50",
   "icons": [
     {
-      "src": "https://github.com/Ringoandreu/grnd-helperweb/icon-192x192.png",
+      "src": "/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://github.com/Ringoandreu/grnd-helperweb/icon-512x512.png",
+      "src": "/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
