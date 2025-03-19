@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Генератор наказаний</title>
-  <link rel="manifest" href="https://github.com/Ringoandreu/grnd-helperweb/manifest.json"> <!-- Убедитесь, что путь правильный -->
+  <link rel="manifest" href="/manifest.json"> <!-- Убедитесь, что путь правильный -->
   <link rel="stylesheet" href="/styles.css"> <!-- Убедитесь, что путь правильный -->
 </head>
 <body>
@@ -28,10 +28,10 @@
     <button id="generate-button">Скопировать</button>
     <button id="add-to-session-button">Добавить</button>
   </div>
-  <script src="https://github.com/Ringoandreu/grnd-helperweb/script.js"></script> <!-- Убедитесь, что путь правильный -->
+  <script src="/script.js"></script> <!-- Убедитесь, что путь правильный -->
   <script>
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("https://github.com/Ringoandreu/grnd-helperweb/sw.js") <!-- Убедитесь, что путь правильный -->
+      navigator.serviceWorker.register("/sw.js") <!-- Убедитесь, что путь правильный -->
         .then((registration) => {
           console.log("Service Worker зарегистрирован: ", registration);
         })
